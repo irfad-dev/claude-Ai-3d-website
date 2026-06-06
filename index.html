@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude AI — Intelligence Reimagined</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="dot"></div>
+<div id="ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <div class="nav-brand">
+    <div class="brand-cube"><i class="fa-solid fa-robot"></i></div>
+    <div class="brand-name">Claude AI</div>
+  </div>
+  <div class="nav-links">
+    <a href="#capabilities">Capabilities</a>
+    <a href="#process">How It Works</a>
+    <a href="#demo">Live Demo</a>
+    <a href="#cta">Get Started</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-sign">Sign In</button>
+    <button class="nav-start">Start Free</button>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-grid-h"></div>
+  <div class="hero-grid-v"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+
+  <div class="hero-left">
+    <div class="h-eyebrow">
+      <div class="live-dot"></div>
+      Claude 3.5 Sonnet &nbsp;·&nbsp; Now Live
+    </div>
+    <h1 class="h-title">
+      <span class="t-plain">Intelligence</span>
+      <span class="t-italic">Reimagined.</span>
+      <span class="t-outline">Rebuilt.</span>
+    </h1>
+    <p class="h-body">
+      Meet <span>Claude</span> — the AI assistant built by Anthropic.<br>
+      Designed to think deeply, write brilliantly,<br>
+      and reason with honesty at its core.
+    </p>
+    <div class="h-tags">
+      <div class="tag"><i class="fa-solid fa-code" style="color:var(--ice);margin-right:6px;font-size:9px;"></i>Code Generation</div>
+      <div class="tag"><i class="fa-solid fa-pen-nib" style="color:var(--copper);margin-right:6px;font-size:9px;"></i>Creative Writing</div>
+      <div class="tag"><i class="fa-solid fa-magnifying-glass" style="color:var(--violet);margin-right:6px;font-size:9px;"></i>Deep Research</div>
+      <div class="tag"><i class="fa-solid fa-chart-line" style="color:var(--mint);margin-right:6px;font-size:9px;"></i>Data Analysis</div>
+    </div>
+    <div class="h-actions">
+      <button class="btn-primary">
+        <i class="fa-solid fa-bolt" style="font-size:12px;"></i>
+        Try Claude Free
+      </button>
+      <button class="btn-secondary">
+        <i class="fa-solid fa-play" style="font-size:10px;"></i>
+        Watch Demo
+      </button>
+    </div>
+  </div>
+
+  <div class="robot-stage">
+    <div class="robot-orbit"><div class="orbit-node"></div></div>
+    <div class="robot-orbit"><div class="orbit-node"></div></div>
+
+    <div class="data-chip chip1"><i class="fa-solid fa-brain" style="margin-right:6px;font-size:8px;"></i>175B PARAMS</div>
+    <div class="data-chip chip2"><i class="fa-solid fa-shield-halved" style="margin-right:6px;font-size:8px;color:var(--mint);"></i>SAFE &amp; ALIGNED</div>
+    <div class="data-chip chip3"><i class="fa-solid fa-bolt" style="margin-right:6px;font-size:8px;"></i>0.8s LATENCY</div>
+
+    <div class="robot-scene">
+      <div class="robot-3d" id="robot">
+        <div class="r-ant-wrap">
+          <div class="r-ant">
+            <div class="r-ant-ball"></div>
+          </div>
+        </div>
+
+        <div class="r-head">
+          <div class="r-head-side"></div>
+          <div class="r-visor"></div>
+          <div class="r-eyes">
+            <div class="r-eye left">
+              <div class="eye-bg"></div>
+              <div class="eye-glow"></div>
+              <div class="eye-pupil"></div>
+              <div class="eye-scan"></div>
+            </div>
+            <div class="r-eye right">
+              <div class="eye-bg"></div>
+              <div class="eye-glow"></div>
+              <div class="eye-pupil"></div>
+              <div class="eye-scan"></div>
+            </div>
+          </div>
+          <div class="r-nose">
+            <div class="r-nose-dot"></div>
+            <div class="r-nose-dot active"></div>
+            <div class="r-nose-dot"></div>
+          </div>
+          <div class="r-mouth">
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+            <div class="r-grille"></div>
+          </div>
+        </div>
+
+        <div class="r-neck-wrap"><div class="r-neck"></div></div>
+
+        <div class="r-shoulder-wrap">
+          <div class="r-shoulder left"></div>
+          <div style="width:180px;"></div>
+          <div class="r-shoulder right"></div>
+        </div>
+
+        <div style="position:relative;">
+          <div class="r-body">
+            <div class="r-screen">
+              <div class="screen-bar b1"></div>
+              <div class="screen-bar b2"></div>
+              <div class="screen-bar b3"></div>
+              <div class="screen-bar b4"></div>
+              <div class="screen-label">CLAUDE · ONLINE</div>
+            </div>
+            <div class="r-orbs">
+              <div class="r-orb orb-a"></div>
+              <div class="r-orb orb-b"></div>
+              <div class="r-orb orb-c"></div>
+            </div>
+            <div class="r-vent">
+              <div class="vent-slot"></div>
+              <div class="vent-slot"></div>
+              <div class="vent-slot"></div>
+              <div class="vent-slot"></div>
+            </div>
+          </div>
+          <div class="r-arms-row">
+            <div class="r-arm left">
+              <div class="arm-upper"></div>
+              <div class="arm-joint"></div>
+              <div class="arm-lower"></div>
+              <div class="arm-hand"></div>
+            </div>
+            <div style="flex:1;"></div>
+            <div class="r-arm right">
+              <div class="arm-upper"></div>
+              <div class="arm-joint"></div>
+              <div class="arm-lower"></div>
+              <div class="arm-hand"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="r-waist"></div>
+
+        <div class="r-legs">
+          <div class="r-leg">
+            <div class="leg-upper"></div>
+            <div class="leg-joint"></div>
+            <div class="leg-lower"></div>
+            <div class="leg-foot"></div>
+          </div>
+          <div class="r-leg">
+            <div class="leg-upper"></div>
+            <div class="leg-joint"></div>
+            <div class="leg-lower"></div>
+            <div class="leg-foot"></div>
+          </div>
+        </div>
+
+        <div class="r-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marq-wrap">
+  <div class="marq-track">
+    <div class="marq-item"><i class="fa-solid fa-microchip"></i>Constitutional AI</div>
+    <div class="marq-item"><i class="fa-solid fa-code-branch"></i>100K Context Window</div>
+    <div class="marq-item"><i class="fa-solid fa-shield-halved"></i>Safe & Helpful</div>
+    <div class="marq-item"><i class="fa-solid fa-language"></i>100+ Languages</div>
+    <div class="marq-item"><i class="fa-solid fa-wand-magic-sparkles"></i>Creative & Analytical</div>
+    <div class="marq-item"><i class="fa-solid fa-bolt"></i>Real-Time Streaming</div>
+    <div class="marq-item"><i class="fa-solid fa-microchip"></i>Constitutional AI</div>
+    <div class="marq-item"><i class="fa-solid fa-code-branch"></i>100K Context Window</div>
+    <div class="marq-item"><i class="fa-solid fa-shield-halved"></i>Safe & Helpful</div>
+    <div class="marq-item"><i class="fa-solid fa-language"></i>100+ Languages</div>
+    <div class="marq-item"><i class="fa-solid fa-wand-magic-sparkles"></i>Creative & Analytical</div>
+    <div class="marq-item"><i class="fa-solid fa-bolt"></i>Real-Time Streaming</div>
+  </div>
+</div>
+
+<section id="capabilities" class="section">
+  <div class="s-eyebrow reveal">01 — What I Can Do</div>
+  <h2 class="s-title reveal">Built for Every<br><em>Kind of Work</em></h2>
+  <div class="cap-grid">
+    <div class="cap-cell reveal">
+      <div class="cap-num">01</div>
+      <div class="cap-icon-box copper"><i class="fa-solid fa-comments"></i></div>
+      <div class="cap-name">Natural Conversation</div>
+      <div class="cap-desc">Context-aware dialogue that feels genuinely human. I understand nuance, tone, humor, and intent — never just keywords.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> Context-Aware</div>
+    </div>
+    <div class="cap-cell reveal">
+      <div class="cap-num">02</div>
+      <div class="cap-icon-box ice"><i class="fa-solid fa-terminal"></i></div>
+      <div class="cap-name">Code Generation</div>
+      <div class="cap-desc">Write, debug, review, and explain code across 50+ languages. From algorithms to full applications — production ready.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> 50+ Languages</div>
+    </div>
+    <div class="cap-cell reveal">
+      <div class="cap-num">03</div>
+      <div class="cap-icon-box violet"><i class="fa-solid fa-feather-pointed"></i></div>
+      <div class="cap-name">Creative Writing</div>
+      <div class="cap-desc">Stories, scripts, poems, ad copy, long-form essays — creative output that captures your voice and elevates your vision.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> Any Genre</div>
+    </div>
+    <div class="cap-cell reveal">
+      <div class="cap-num">04</div>
+      <div class="cap-icon-box mint"><i class="fa-solid fa-chart-bar"></i></div>
+      <div class="cap-name">Data Analysis</div>
+      <div class="cap-desc">Upload datasets, ask questions in plain English, get meaningful insights. I surface patterns humans miss in seconds.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> Smart Insights</div>
+    </div>
+    <div class="cap-cell reveal">
+      <div class="cap-num">05</div>
+      <div class="cap-icon-box copper"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+      <div class="cap-name">Deep Research</div>
+      <div class="cap-desc">Synthesize information across vast knowledge. Summarize papers, compare sources, fact-check claims — with clear citations.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> Verified Sources</div>
+    </div>
+    <div class="cap-cell reveal">
+      <div class="cap-num">06</div>
+      <div class="cap-icon-box ice"><i class="fa-solid fa-globe"></i></div>
+      <div class="cap-name">Multi-Language</div>
+      <div class="cap-desc">Communicate in over 100 languages fluently. Translate, localize, and adapt content for any audience around the world.</div>
+      <div class="cap-badge"><i class="fa-solid fa-circle-check"></i> 100+ Languages</div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding:130px 0;background:var(--surface);">
+  <div style="max-width:1300px;margin:0 auto;padding:0 64px;">
+    <div class="s-eyebrow reveal">02 — Process</div>
+    <h2 class="s-title reveal">How Claude<br><em>Thinks</em></h2>
+    <div class="proc-wrap">
+      <div class="proc-track"></div>
+      <div class="proc-grid">
+        <div class="proc-step reveal">
+          <div class="step-icon si-copper"><i class="fa-solid fa-keyboard"></i></div>
+          <div class="proc-label">Step 01</div>
+          <div class="proc-name">You Ask</div>
+          <div class="proc-desc">Type naturally. No special commands or syntax needed — just your thoughts, your way.</div>
+        </div>
+        <div class="proc-step reveal">
+          <div class="step-icon si-ice"><i class="fa-solid fa-brain"></i></div>
+          <div class="proc-label">Step 02</div>
+          <div class="proc-name">I Understand</div>
+          <div class="proc-desc">Neural networks decode intent, context, and nuance at 175 billion parameters deep.</div>
+        </div>
+        <div class="proc-step reveal">
+          <div class="step-icon si-violet"><i class="fa-solid fa-gears"></i></div>
+          <div class="proc-label">Step 03</div>
+          <div class="proc-name">I Reason</div>
+          <div class="proc-desc">Constitutional AI ensures every response is accurate, honest, and grounded in ethics.</div>
+        </div>
+        <div class="proc-step reveal">
+          <div class="step-icon si-mint"><i class="fa-solid fa-paper-plane"></i></div>
+          <div class="proc-label">Step 04</div>
+          <div class="proc-name">You Receive</div>
+          <div class="proc-desc">A precise, useful answer streamed in real-time — tailored exactly to what you need.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="section">
+  <div class="s-eyebrow reveal">03 — Numbers</div>
+  <h2 class="s-title reveal">The Scale of<br><em>Intelligence</em></h2>
+  <div class="stats-grid">
+    <div class="stat-cell reveal" style="--c:var(--copper);">
+      <div class="stat-num s-copper">175B<span style="font-size:.5em;">+</span></div>
+      <div class="stat-label-txt">Parameters</div>
+      <div class="stat-sub-txt">Neural network depth</div>
+    </div>
+    <div class="stat-cell reveal" style="--c:var(--ice);">
+      <div class="stat-num s-ice">100K</div>
+      <div class="stat-label-txt">Context Window</div>
+      <div class="stat-sub-txt">Tokens per conversation</div>
+    </div>
+    <div class="stat-cell reveal">
+      <div class="stat-num s-violet">50<span style="font-size:.5em;">+</span></div>
+      <div class="stat-label-txt">Code Languages</div>
+      <div class="stat-sub-txt">Full programming support</div>
+    </div>
+    <div class="stat-cell reveal">
+      <div class="stat-num s-mint">0.8<span style="font-size:.45em;">sec</span></div>
+      <div class="stat-label-txt">Response Time</div>
+      <div class="stat-sub-txt">Average first token</div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" style="padding:130px 0;background:var(--surface);">
+  <div style="max-width:1300px;margin:0 auto;padding:0 64px;">
+    <div class="demo-layout">
+      <div>
+        <div class="s-eyebrow reveal">04 — Live Demo</div>
+        <h2 class="s-title reveal">See Claude<br><em>In Action</em></h2>
+        <div class="demo-points">
+          <div class="d-point reveal">
+            <div class="d-icon"><i class="fa-solid fa-crosshairs"></i></div>
+            <div>
+              <div class="d-name">Precise & Grounded</div>
+              <div class="d-desc">No hallucinations. Every answer is reasoned step-by-step with clear logic, not guesswork.</div>
+            </div>
+          </div>
+          <div class="d-point reveal">
+            <div class="d-icon"><i class="fa-solid fa-lock" style="color:var(--mint);"></i></div>
+            <div>
+              <div class="d-name">Safe by Design</div>
+              <div class="d-desc">Constitutional AI training means Claude is built to be helpful, harmless, and honest — always.</div>
+            </div>
+          </div>
+          <div class="d-point reveal">
+            <div class="d-icon"><i class="fa-solid fa-bolt" style="color:var(--ice);"></i></div>
+            <div>
+              <div class="d-name">Blazing Fast</div>
+              <div class="d-desc">Real-time streaming responses under one second. No waiting — just instant, fluid conversation.</div>
+            </div>
+          </div>
+          <div class="d-point reveal">
+            <div class="d-icon"><i class="fa-solid fa-infinity" style="color:var(--violet);"></i></div>
+            <div>
+              <div class="d-name">Unlimited Versatility</div>
+              <div class="d-desc">One AI for everything. Code, write, analyze, research — switch tasks in the same conversation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-win reveal">
+        <div class="chat-header">
+          <div class="chat-btns">
+            <div class="cb cb-r"></div>
+            <div class="cb cb-y"></div>
+            <div class="cb cb-g"></div>
+          </div>
+          <div class="chat-id">CLAUDE · SESSION</div>
+          <div class="chat-status">
+            <div class="status-dot"></div>
+            ONLINE
+          </div>
+        </div>
+        <div class="chat-msgs">
+          <div class="chat-msg user">
+            <div class="msg-av av-user"><i class="fa-solid fa-user"></i></div>
+            <div class="msg-bub bub-user">Write a Python function to fetch and parse JSON from a URL with error handling.</div>
+          </div>
+          <div class="chat-msg">
+            <div class="msg-av av-claude">C</div>
+            <div class="msg-bub bub-claude">
+              Here's a robust implementation:
+              <div class="code-snippet"><span class="code-key">import</span> requests, json<br><br><span class="code-key">def</span> <span style="color:var(--copper);">fetch_json</span>(url, timeout=10):<br>&nbsp;&nbsp;<span class="code-key">try</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;res = requests.get(url, timeout=timeout)<br>&nbsp;&nbsp;&nbsp;&nbsp;res.raise_for_status()<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">return</span> res.json()<br>&nbsp;&nbsp;<span class="code-key">except</span> Exception <span class="code-key">as</span> e:<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-key">return</span> {<span class="code-str">"error"</span>: str(e)}</div>
+            </div>
+          </div>
+          <div class="chat-msg user">
+            <div class="msg-av av-user"><i class="fa-solid fa-user"></i></div>
+            <div class="msg-bub bub-user">Can you add retry logic with exponential backoff?</div>
+          </div>
+          <div class="chat-msg">
+            <div class="msg-av av-claude">C</div>
+            <div class="typing">
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+              <div class="typing-dot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-inp">
+          <input class="inp-box" placeholder="Ask Claude anything..." readonly>
+          <button class="inp-send"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-orb"></div>
+  <div style="position:relative;z-index:1;">
+    <h2 class="cta-h reveal">Start Thinking<br><em>With Claude.</em></h2>
+    <p class="cta-body reveal">Join millions using Claude to work smarter, create faster, and reason deeper. Free to start — no credit card required.</p>
+    <div class="cta-actions reveal">
+      <button class="btn-primary">
+        <i class="fa-solid fa-rocket" style="font-size:11px;"></i>
+        Get Started Free
+      </button>
+      <button class="btn-secondary">
+        <i class="fa-solid fa-book-open" style="font-size:10px;"></i>
+        View Documentation
+      </button>
+    </div>
+    <div class="cta-note reveal">
+      <i class="fa-solid fa-shield-halved" style="color:var(--mint);margin-right:6px;font-size:9px;"></i>
+      Free tier available &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; Instant access &nbsp;·&nbsp; Built by Anthropic
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <div class="brand-cube" style="width:28px;height:28px;font-size:12px;"><i class="fa-solid fa-robot"></i></div>
+    <div class="foot-name">Claude <span style="color:var(--copper);">AI</span></div>
+  </div>
+  <div class="foot-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">API</a>
+    <a href="#">Anthropic</a>
+    <a href="#">Support</a>
+  </div>
+  <div class="foot-copy">© 2026 Anthropic PBC. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
